@@ -33,7 +33,7 @@ def main():
 
     orthogonalize_qwen3_weights(model, direction)
 
-    print("Saving…"); model.save_pretrained(args.out_path)
+    print("Saving…"); model.save_pretrained(args.out_path, push_to_hub=True)
     print("Done.  Load with AutoModelForCausalLM.from_pretrained(...)")
 
 if __name__ == "__main__":
